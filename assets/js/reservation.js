@@ -9,11 +9,24 @@ function openModal() {
 function closeModal() {
     modal.style.display = "none";
 }
-
+function openModal() {
+    modal.style.display = "block";
+    setDefaultDate();
+}
 window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
     }
+}
+
+function setDefaultDate() {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("reservationDate").value = today;
 }
 
 // Form submission
