@@ -4,7 +4,6 @@ const navBar = document.querySelector('.nav-bar');
 const navOverlay = document.querySelector('.nav-overlay');
 const navLinks = document.querySelectorAll('ul li a');
 
-
 const words = [
 	'تنظيف الأرضيات', 
 	'تنظيف عام', 
