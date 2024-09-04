@@ -40,3 +40,21 @@
     font-family: inherit;
     font-weight: 600;
 }
+.button-container{
+    margin: 1rem 0;
+}
+@media (max-width: 768px){
+    .modal-content {
+        margin: 15% auto;
+        padding: 20px;
+        width: 90%;
+        max-width: 500px;
+    }
+}
+@media (max-width: 480px){
+    .button-container .btn{
+        padding: 0.6rem 2rem;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+}

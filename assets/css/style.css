@@ -155,6 +155,28 @@ li{
 .btn:hover{
     background-color: rgba(255, 142, 113, 0.8);
 }
+/* New styles for WhatsApp button */
+.whatsapp-button {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 50px;
+    left: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
 a:is(:link, :active, :visited).active {
     color: var(--bs-primary)
 }
@@ -167,7 +189,7 @@ h1, h2, h3, h4, h5, .logo{
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 7px;
-    background-color: var(--bs-primary);
+    background-color: #ff8d7173;
     color: white;
     font-size: 1.5rem;
     bottom: 50px;
@@ -242,8 +264,8 @@ header{
     opacity: 0;
     z-index: 7;
     position: fixed;
-    top: 3px;
-    right: 3px;
+    top: 15px;
+    right: 15px;
     font-size: 2.5rem;
     font-weight: 300;
     cursor: pointer;
@@ -448,12 +470,13 @@ header{
         width: 100%;
     }
     .left-container img{
-        margin: 4rem 0 1rem 0;
+        margin: -4rem 0 1rem 0;
         top: 0;
     }
     .bio-text{
         width: 100%;
-        padding-bottom: 10rem;
+        padding-bottom: 5rem;
+        padding-top: 1rem;
     }
     .right-container p{
         font-size: 0.9rem;
@@ -560,14 +583,26 @@ header{
     }
     .offer .text-p{
         width: 100%;
-        margin: 0 4rem;
+        margin: 0 1rem;
     }
     .offer-content{
         display: block;
         height: 100%;
     }
+    .offer-h1{
+        font-size: 2rem;
+        text-align: right;
+    }
+    .offer-p{
+        text-align: right;
+        font-size: 1.3rem;
+    }
     .offer-img, .offer-info{
         width: 100%;
+    }
+    .text-container{
+        padding: 3rem 1rem;
+        text-align: right;
     }
 }
 @media (max-width: 768px){
@@ -721,7 +756,14 @@ header{
         padding-left: 10px;
         padding-right: 10px;
     }
+    .right-testimonial .frame{
+        max-width: 60%;
+        bottom: -5.5rem;
+        left: 1rem;
+        height: 200px;
+    }
 }
+
 /* Contact */
 .contact {
     padding: 4rem 0;
@@ -747,29 +789,6 @@ header{
 }
 ::placeholder{
     font-size: 1.2rem;
-}
-/* New styles for WhatsApp button */
-.whatsapp-button {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 40px;
-    left: 20px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 }
 /*** Footer ***/
 footer{
@@ -805,7 +824,8 @@ footer{
     display: flex;
     flex-direction: column;
 }
-.footer-container span{
+
+.adress .adress-line{
     padding: 0.5rem 0;
     font-size: 1.2rem;
     color: var(--bs-gray);
