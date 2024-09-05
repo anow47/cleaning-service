@@ -696,11 +696,13 @@ header{
     }
     .service-card img{
         width: 100%;
+        border-radius: 4px 4px 0 0;
     }
     .card-info{
         width: 100%;
         gap: 0.5rem;
         padding: 1rem 0;
+        border-radius: 0 0 4px 4px;
     }
     .other-services .btn{
         padding: 0.6rem 1rem;
