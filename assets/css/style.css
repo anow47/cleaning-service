@@ -276,7 +276,6 @@ header{
         display: block;
     }
     .nav{
-        padding: 2rem 0;
         flex-direction: row-reverse;
     }
     .nav-overlay{
@@ -911,9 +910,12 @@ footer{
     display: flex;
     flex-direction: column;
 }
+.footer-container .adress p {
+    color: var(--bs-gray);
+}
 .adress .adress-icon{
     color: var(--bs-primary);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     padding-left: 1rem;
 }
@@ -962,5 +964,12 @@ footer{
     footer, .contact{
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+@media (max-width: 480px){
+    .socials i {
+        padding: 0.8rem;
+        margin-left: 0.5rem;
+        font-size: 0.8rem;
     }
 }
