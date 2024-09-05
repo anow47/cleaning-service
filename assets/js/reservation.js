@@ -1,18 +1,16 @@
 // Modal functionality
-var modal = document.getElementById("reservationModal");
+const modal = document.getElementById("reservationModal");
 console.log(modal)
 
 function openModal() {
     modal.style.display = "block";
+    setDefaultDate();
 }
 
 function closeModal() {
     modal.style.display = "none";
 }
-function openModal() {
-    modal.style.display = "block";
-    setDefaultDate();
-}
+
 window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
@@ -20,10 +18,10 @@ window.onclick = function(event) {
 }
 
 function setDefaultDate() {
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    let yyyy = today.getFullYear();
 
     today = yyyy + '-' + mm + '-' + dd;
     document.getElementById("reservationDate").value = today;
@@ -32,7 +30,7 @@ function setDefaultDate() {
 // Form submission
 document.getElementById("reservationForm").addEventListener("submit", function(e) {
     e.preventDefault();
-    var formData = new FormData(this);
+    const formData = new FormData(this);
     fetch("submit_reservation.php", {
         method: "POST",
         body: formData

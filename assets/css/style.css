@@ -207,12 +207,7 @@ header{
     width: 100%;
 }
 .logo{
-    font-size: 1.4rem;
-    color: var(--bs-secondary);
-    font-weight: 600;
-}
-.logo:hover{
-    color: var(--bs-gray);
+    width: 100px;
 }
 .nav-bar{
     position: relative;
@@ -417,7 +412,8 @@ header{
 }
 .left-container p{
     font-size: 2rem;
-    color: var(--bs-light);
+    color: var(--bs-primary);
+    font-weight: 600;
 }
 .left-container img{
     max-width: 100%;
@@ -500,7 +496,8 @@ header{
     padding-right: var(--bs-section-padding);
 }
 .offer-text{
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--bs-white);
     z-index: 1;
     height: 10rem;
@@ -510,7 +507,6 @@ header{
 .offer .text-p{
     text-align: right;
     width: 35%;
-    margin: 0 4rem;
     font-size: 1.3rem;
 }
 .offer-content{
@@ -520,9 +516,13 @@ header{
 .offer-img{
     width: 50%;
 }
+.offer-img img{
+    width: 100%;
+    height: 450px;
+}
 .offer-info{
     width: 50%;
-    height: 450px;
+    height: 350px;
 }
 .offer-h1{
     font-size: 2rem;
@@ -532,12 +532,7 @@ header{
 .offer-p{
     color: var(--bs-gray);
     font-size: 1.5rem;
-    margin: 0.5rem 0 2rem 0;
     font-weight: 400;
-}
-.offer-img img{
-    max-width: 100%;
-    margin: auto;
 }
 .offer-info{
     background-color: rgba(0, 58, 112, 0.9);
@@ -575,27 +570,27 @@ header{
         padding-right: 20px;
     }
     .offer-text{
-        justify-content: center;
+        justify-content: end;
+        flex-direction: column;
+        text-align: right;
         height: 10rem;
-        position: relative;
-        margin-top: 4rem;
-        height: 5rem;
+        margin-top: 0;
+    }
+    .offer-text div{
+        width: 100%;
     }
     .offer .text-p{
         width: 100%;
-        margin: 0 1rem;
+        margin: 1rem 0;
+        display: block;
     }
     .offer-content{
-        display: block;
+        flex-direction: column-reverse;
         height: 100%;
     }
     .offer-h1{
         font-size: 2rem;
         text-align: right;
-    }
-    .offer-p{
-        text-align: right;
-        font-size: 1.3rem;
     }
     .offer-img, .offer-info{
         width: 100%;
@@ -611,9 +606,111 @@ header{
         padding-right: 10px;
     }
     .offer-h1{
-    font-weight: 300;
-    font-size: 2rem;
-    margin-top: 3rem;
+        font-weight: 300;
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+    .offer-img img{
+        height: 300px;
+    }
+}
+/* Services */
+.services{
+    background-image: url(../images/hero_1.jpg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: var(--bs-section-padding);
+    padding-right: var(--bs-section-padding);
+    margin-top: 5rem;
+    position: relative;
+    z-index: 1;
+}
+.services::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 58, 112, 0.9);
+    left: 0;
+    z-index: -1;
+    top: 0;
+}
+.services-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 4rem 0;
+}
+.service-card{
+    display: flex;
+    max-width: 100%;
+}
+.card-info{
+    background-color: #f8f9fa;
+    width: 25%;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    text-align: center;
+    gap: 2rem;
+}
+.card-info h2{
+    color: var(--bs-secondary);
+}
+.service-card img{
+    width: 75%;
+    height: 380px;
+    border-radius: 4px 0 0 4px;
+}
+.other-services{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (max-width: 991px){
+    .services{
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 0rem;
+    }
+}
+@media (max-width: 768px){
+    .services-container{
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .service-card{
+        max-width: 100%;
+    }
+    .service-card{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .service-card img{
+        width: 100%;
+    }
+    .card-info{
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+    .other-services .btn{
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px){
+    .service-card img{
+        max-height: 200px;
     }
 }
 /*** section Stats ***/
