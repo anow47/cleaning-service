@@ -95,15 +95,15 @@ toTop.onclick = function () {
   }
   
 // Add active class to active link and visited
-const currentLink = document.querySelectorAll('.nav-bar a')
-currentLink.forEach(link => {
-	link.addEventListener('click', () => {
-		currentLink.forEach(el => {
-			el.classList.remove('active')
-		})
-		link.classList.add('active')
-	})
-})
+// const currentLink = document.querySelectorAll('.nav-bar a')
+// currentLink.forEach(link => {
+// 	link.addEventListener('click', () => {
+// 		currentLink.forEach(el => {
+// 			el.classList.remove('active')
+// 		})
+// 		link.classList.add('active')
+// 	})
+// })
 
 //Animation on scroll element fade-in
 const scrollElements = document.querySelectorAll(".js-scroll")
