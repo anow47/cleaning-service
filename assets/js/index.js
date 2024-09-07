@@ -5,16 +5,16 @@ const navOverlay = document.querySelector('.nav-overlay');
 const navLinks = document.querySelectorAll('ul li a');
 
 const words = [
-	'تنظيف الأرضيات', 
 	'تنظيف عام', 
+	'تنظيف الفلل والقصور',
+	'تنظيف المطاعم والكافيهات', 
+	'تنظيف شقق',
+	'تنظيف الأرضيات', 
 	'رش حشرات',
 	'تنظيف التكييف', 
-	'تنظيف المطاعم والكافيهات', 
-	'تنظيف الفلل والقصور',
 	'تنظيف الكنب والمجالس', 
 	'تنظيف ستائر والسجاد', 
 	'تنظيف المطابخ والزجاج',
-	'تنظيف شقق'
 ];
 
 let wordIndex = 0;
@@ -68,18 +68,6 @@ function hideNavBar() {
 }
 
 
-$('.owl-carouse').owlCarousel({
-    center: true,
-    items:2,
-    loop:true,
-    margin:10,
-    responsive:{
-        600:{
-            items:4
-        }
-    }
-});
-
 // Scroll To Top
 const toTop = document.querySelector('.to-top');
 window.onscroll = () => {
@@ -93,17 +81,6 @@ toTop.onclick = function () {
 	  behavior: 'smooth',
 	})
   }
-  
-// Add active class to active link and visited
-// const currentLink = document.querySelectorAll('.nav-bar a')
-// currentLink.forEach(link => {
-// 	link.addEventListener('click', () => {
-// 		currentLink.forEach(el => {
-// 			el.classList.remove('active')
-// 		})
-// 		link.classList.add('active')
-// 	})
-// })
 
 //Animation on scroll element fade-in
 const scrollElements = document.querySelectorAll(".js-scroll")
