@@ -1,0 +1,65 @@
+header{
+    position: relative;
+    background: #f0f0f0;
+}
+.discount_container{
+    position: relative;
+    text-align: center;
+    padding: 2rem var(--bs-section-padding);
+    background: url('../images/hero_1.jpg.webp') no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.discount_container::before{
+    background-color: rgba(0, 58, 112, 0.9);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+    top: 0;
+}
+.discount-title{
+    color: var(--bs-primary);
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+.discount_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.discount_cards .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+
+/* Tablet devices */
+@media screen and (max-width: 900px) {
+    .discount_container{
+        padding: 2rem 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .discount_container{
+        padding: 1rem 10px;
+    }
+    .discount_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .discount-title{
+        font-size: 1.5rem;
+        padding: 2rem 0;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    .discount_cards {
+        grid-template-columns: 1fr;
+    }
+}

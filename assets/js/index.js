@@ -1,4 +1,3 @@
-
 const closeIcon = document.querySelector('.close-icon');
 const navBar = document.querySelector('.nav-bar');
 const navOverlay = document.querySelector('.nav-overlay');
